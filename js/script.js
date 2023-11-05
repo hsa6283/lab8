@@ -1,13 +1,13 @@
 function init(){
-    var button = document.getElementById('entrybutton');
-  
-    function showMeText(){
-      var textbox = document.getElementById('entryinput');
-      document.getElementById('textoutput').innerHTML = textbox.value;
-      alert("Seung-A Ham: " + textbox.value);
+    //add your javascrip between these two lines of code
+    function eventFunc(){
+      var name = 'Seung-A Ham: ';
+      var text = document.getElementById('entryinput');
+      var result = document.getElementById('textoutput');
+      alert(name+text.value);
+      result.innerHTML = text.value;
     }
-  
-    button.addEventListener('click', showMeText);
-    }
-    
-  window.addEventListener('load', init);
+    var but = document.getElementById('entrybutton');
+    but.addEventListener('click', eventFunc);
+}
+window.addEventListener('load', init);
